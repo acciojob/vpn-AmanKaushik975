@@ -1,7 +1,4 @@
 package com.driver.model;// Note: Do not write @Enumerated annotation above CountryName in this model.
-import com.driver.model.CountryName;
-import com.driver.model.ServiceProvider;
-import com.driver.model.User;
 
 import javax.persistence.*;
 
@@ -11,8 +8,8 @@ import javax.persistence.*;
 public class Country {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer countryId;
-    private CountryName countryName;
+    private Integer id;
+    private CountryName name;
     private String code;
     @JoinColumn
     @OneToOne
@@ -24,28 +21,28 @@ public class Country {
     public Country() {
     }
 
-    public Country(Integer countryId, CountryName countryName, String code, User user, ServiceProvider serviceProvider) {
-        this.countryId = countryId;
-        this.countryName = countryName;
+    public Country(Integer id, CountryName name, String code, User user, ServiceProvider serviceProvider) {
+        this.id = id;
+        this.name = name;
         this.code = code;
         this.user = user;
         this.serviceProvider = serviceProvider;
     }
 
-    public Integer getCountryId() {
-        return countryId;
+    public Integer getId() {
+        return id;
     }
 
-    public void setCountryId(Integer countryId) {
-        this.countryId = countryId;
+    public void setId(Integer id) {
+        this.id = id;
     }
 
-    public CountryName getCountryName() {
-        return countryName;
+    public CountryName getName() {
+        return name;
     }
 
-    public void setCountryName(CountryName countryName) {
-        this.countryName = countryName;
+    public void setName(CountryName name) {
+        this.name = name;
     }
 
     public String getCode() {
