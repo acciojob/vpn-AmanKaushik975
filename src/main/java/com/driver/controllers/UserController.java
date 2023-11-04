@@ -1,4 +1,5 @@
 package com.driver.controllers;
+import com.driver.model.User;
 import com.driver.services.impl.UserServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -24,3 +25,4 @@ public class UserController {
         User user = userService.subscribe(userId, serviceProviderId);
     }
 }
+
