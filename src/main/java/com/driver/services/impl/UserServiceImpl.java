@@ -36,7 +36,7 @@ public class UserServiceImpl implements UserService {
             throw new Exception("Country not found");
         }
         Country country=new Country();
-        country.setName(CountryName.valueOf(CountryNameInUpperCase));
+        country.setCountryName(CountryName.valueOf(CountryNameInUpperCase));
         country.setCode(CountryName.valueOf(CountryNameInUpperCase).toCode());
 
         User user=new User();

@@ -8,8 +8,8 @@ import javax.persistence.*;
 public class Country {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
-    private CountryName name;
+    private Integer countryId;
+    private CountryName countryName;
     private String code;
     @JoinColumn
     @OneToOne
@@ -21,28 +21,28 @@ public class Country {
     public Country() {
     }
 
-    public Country(Integer id, CountryName name, String code, User user, ServiceProvider serviceProvider) {
-        this.id = id;
-        this.name = name;
+    public Country(Integer countryId, CountryName countryName, String code, User user, ServiceProvider serviceProvider) {
+        this.countryId = countryId;
+        this.countryName = countryName;
         this.code = code;
         this.user = user;
         this.serviceProvider = serviceProvider;
     }
 
-    public Integer getId() {
-        return id;
+    public Integer getCountryId() {
+        return countryId;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
+    public void setCountryId(Integer countryId) {
+        this.countryId = countryId;
     }
 
-    public CountryName getName() {
-        return name;
+    public CountryName getCountryName() {
+        return countryName;
     }
 
-    public void setName(CountryName name) {
-        this.name = name;
+    public void setCountryName(CountryName countryName) {
+        this.countryName = countryName;
     }
 
     public String getCode() {
